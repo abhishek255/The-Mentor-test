@@ -269,3 +269,9 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 <p align="center">
   ⭐ Star this repo if it helps you land your dream job! ⭐
 </p>
+
+---
+
+## Testing
+
+Testing tasks are started from Slack and executed automatically by AgentX, which reviews and validates each change.
