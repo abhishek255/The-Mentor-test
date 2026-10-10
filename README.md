@@ -269,3 +269,9 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 <p align="center">
   ⭐ Star this repo if it helps you land your dream job! ⭐
 </p>
+
+## 🤝 Contributing
+
+- **Report issues or suggest improvements** — open a GitHub issue to report bugs or suggest ideas.
+- **Submit changes** — fork the repo and open a pull request with your changes.
+
