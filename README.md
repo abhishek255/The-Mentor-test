@@ -275,3 +275,7 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 - **Report issues or suggest improvements** — open a GitHub issue to report bugs or suggest ideas.
 - **Submit changes** — fork the repo and open a pull request with your changes.
 
+## Code of Conduct
+
+We expect all participants to treat each other with respect and kindness.
+
