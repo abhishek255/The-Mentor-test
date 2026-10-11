@@ -281,5 +281,5 @@ Be respectful and kind.
 
 ## 🙋 Getting Help
 
-If you have a question, open a [GitHub issue](https://github.com/ps06756/The-Mentor/issues) and we'll be happy to help.
+If you have a question, open a [GitHub Discussions](https://github.com/ps06756/The-Mentor/discussions) thread and we'll be happy to help.
 
