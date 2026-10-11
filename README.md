@@ -277,5 +277,5 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 
 ## Code of Conduct
 
-We expect all participants to treat each other with respect and kindness.
+Be respectful and kind.
 
