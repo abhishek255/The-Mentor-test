@@ -279,6 +279,12 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 
 Be respectful and kind.
 
+## 📋 Release review checklist
+
+- Review the exact pull request changes, not what you assume they contain.
+- Check that the proposed checks passed before approving.
+- Let the owner merge; do not merge on their behalf.
+
 ## 🙋 Getting Help
 
 If you have a question, open a [GitHub Discussions](https://github.com/ps06756/The-Mentor/discussions) thread and we'll be happy to help.
