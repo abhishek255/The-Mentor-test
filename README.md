@@ -279,7 +279,7 @@ MIT License - see [LICENSE](./LICENSE) file for details.
 
 Be respectful and kind.
 
-## 📋 Release review checklist
+## 📋 Release verification checklist
 
 - Review the exact pull request changes, not what you assume they contain.
 - Check that the proposed checks passed before approving.
