@@ -289,3 +289,6 @@ Be respectful and kind.
 
 If you have a question, open a [GitHub Discussions](https://github.com/ps06756/The-Mentor/discussions) thread and we'll be happy to help.
 
+## Spec059 S059-20261013T1450Z ordered example
+Spec059 S059-20261013T1450Z step B uses the ordered example heading.
+1. Spec059 S059-20261013T1450Z step C follows step B.
