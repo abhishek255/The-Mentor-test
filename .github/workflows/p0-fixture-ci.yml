@@ -1,0 +1,28 @@
+name: P0 synthetic fixture checks
+
+on:
+  push:
+    branches: [codex/p0-e2e-fixture-20261014-8g04obmi]
+  pull_request:
+    branches: [codex/p0-e2e-fixture-20261014-8g04obmi]
+    types: [opened, synchronize, reopened, ready_for_review]
+
+permissions:
+  contents: read
+
+concurrency:
+  group: p0-fixture-${{ github.event_name }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    timeout-minutes: 5
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-node@v5
+        with:
+          node-version: 22
+      - run: npm ci
+      - run: npm run build
+      - run: npm test
