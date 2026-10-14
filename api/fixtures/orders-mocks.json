@@ -1,0 +1,38 @@
+{
+  "schemaVersion": "source-backed-api-fixtures/v1",
+  "operationId": "listOrders",
+  "method": "GET",
+  "path": "/orders",
+  "inputField": "mode",
+  "scope": "SYNTHETIC_TEST_FIXTURE",
+  "variants": [
+    {
+      "id": "success",
+      "inputValue": "success",
+      "status": 200,
+      "body": {
+        "orders": [
+          {
+            "name": "Sample order"
+          }
+        ]
+      }
+    },
+    {
+      "id": "refusal",
+      "inputValue": "refusal",
+      "status": 403,
+      "body": {
+        "error": "refused"
+      }
+    },
+    {
+      "id": "invalid-data",
+      "inputValue": "invalid-data",
+      "status": 200,
+      "body": {
+        "orders": "not-an-array"
+      }
+    }
+  ]
+}

@@ -1,0 +1,13 @@
+{
+  "name": "p0-orders-acceptance-fixture",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "exports": {
+    ".": "./src/index.mjs"
+  },
+  "scripts": {
+    "build": "node --check src/index.mjs",
+    "test": "node --test"
+  }
+}
