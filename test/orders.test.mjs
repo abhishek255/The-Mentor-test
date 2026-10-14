@@ -10,15 +10,15 @@ const variants = new Map([
 
 test('renders the source-backed success mock', async () => {
   globalThis.fetch = async (url) => { assert.equal(url, '/orders?mode=success'); return variants.get('success'); };
-  assert.equal(await renderOrders('success'), '<li data-testid="orders-list">Sample order</li>');
+  assert.equal(await renderOrders({ mode: 'success' }), '<li data-testid="orders-list">Sample order</li>');
 });
 
 test('preserves the source-backed refusal status', async () => {
   globalThis.fetch = async (url) => { assert.equal(url, '/orders?mode=refusal'); return variants.get('refusal'); };
-  assert.equal(await renderOrders('refusal'), 'refused:403');
+  assert.equal(await renderOrders({ mode: 'refusal' }), 'refused:403');
 });
 
 test('rejects source-backed invalid response data', async () => {
   globalThis.fetch = async (url) => { assert.equal(url, '/orders?mode=invalid-data'); return variants.get('invalid-data'); };
-  assert.equal(await renderOrders('invalid-data'), 'invalid-data');
+  assert.equal(await renderOrders({ mode: 'invalid-data' }), 'invalid-data');
 });
