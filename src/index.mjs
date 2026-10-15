@@ -1,5 +1,11 @@
-/** Synthetic source-backed mock contract entry point. Intentionally incomplete starter for the live task. */
+/** Candidate 1 – intentionally incomplete (success only). */
 export async function renderOrders(input) {
-  void input.mode;
+  const res = await fetch(`/orders?mode=${input.mode}`);
+  if (input.mode === 'success') {
+    const body = await res.json();
+    return body.orders.map(o => `<li data-testid="orders-list">${o.name}</li>`).join('');
+  }
+  // TODO: refusal branch not implemented – candidate 1 is intentionally incomplete
+  // TODO: invalid-data branch not implemented – candidate 1 is intentionally incomplete
   return '';
 }
