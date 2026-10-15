@@ -4,7 +4,6 @@
   "method": "GET",
   "path": "/orders",
   "inputField": "mode",
-  "scope": "SYNTHETIC_TEST_FIXTURE",
   "variants": [
     {
       "id": "success",
