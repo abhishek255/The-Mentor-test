@@ -1,11 +1,18 @@
 /** Synthetic source-backed mock contract entry point. */
+
+function escapeHtml(str) {
+  return String(str)
+    .replace(/&/g, '&amp;').replace(/</g, '&lt;')
+    .replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+}
+
 export async function renderOrders(input) {
-  const res = await fetch(`/orders?mode=${input.mode}`);
+  const safeMode = encodeURIComponent(input.mode);
+  const res = await fetch(`/orders?mode=${safeMode}`);
   if (!res.ok) { const body = await res.json(); return `${body.error}:${res.status}`; }
   const body = await res.json();
   if (!Array.isArray(body.orders)) return 'invalid-data';
-  // Intentional defect: order names interpolated without HTML escaping
-  return body.orders.map(o => `<li data-testid="orders-list">${o.name}</li>`).join('');
+  return body.orders.map(o => `<li data-testid="orders-list">${escapeHtml(o.name)}</li>`).join('');
 }
 
 export function getLiteralInventory(input) {
