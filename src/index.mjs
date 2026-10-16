@@ -22,8 +22,8 @@ export async function renderOrders(input) {
   return data.orders.map(o => `<li data-testid="orders-list">${htmlEscape(o.name)}</li>`).join('');
 }
 
-// First candidate: deliberate fault – 'hell0' uses digit zero, not letter o
+// Corrected: exports[0].name is 'hello' (letter o)
 export function getLiteralInventory(input) {
   void input;
-  return { protocol: 'registered-module-export-inventory/v1', exports: [{ name: 'hell0', kind: 'callable' }] };
+  return { protocol: 'registered-module-export-inventory/v1', exports: [{ name: 'hello', kind: 'callable' }] };
 }
