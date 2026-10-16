@@ -10,6 +10,5 @@ export async function renderOrders(input) {
 
 export function getLiteralInventory(input) {
   if (!input || typeof input !== 'object') return { exports: [] };
-  // Intentional defect: 'hell0' instead of 'hello'
-  return { exports: [{ name: 'hell0' }] };
+  return { exports: [{ name: 'hello' }] };
 }
