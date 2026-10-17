@@ -1,6 +1,6 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
-import { renderOrders } from '../src/index.mjs';
+import { renderOrders, getLiteralInventory } from '../src/index.mjs';
 
 const variants = new Map([
   ['success', { ok: true, status: 200, json: async () => ({ orders: [{ name: 'Sample order' }] }) }],
@@ -21,4 +21,18 @@ test('preserves the source-backed refusal status', async () => {
 test('rejects source-backed invalid response data', async () => {
   globalThis.fetch = async (url) => { assert.equal(url, '/orders?mode=invalid-data'); return variants.get('invalid-data'); };
   assert.equal(await renderOrders({ mode: 'invalid-data' }), 'invalid-data');
+});
+
+test('HTML-escapes ampersand and quotes in order names', async () => {
+  globalThis.fetch = async () => ({ ok: true, status: 200, json: async () => ({ orders: [{ name: 'A&B "Co" <Ltd>' }] }) });
+  assert.equal(await renderOrders({ mode: 'escape-test' }), '<li data-testid="orders-list">A&amp;B &quot;Co&quot; &lt;Ltd&gt;</li>');
+});
+
+test('URL-encodes mode with special characters', async () => {
+  globalThis.fetch = async (url) => { assert.equal(url, '/orders?mode=a%26b'); return { ok: true, status: 200, json: async () => ({ orders: [] }) }; };
+  assert.equal(await renderOrders({ mode: 'a&b' }), '');
+});
+
+test('getLiteralInventory returns hello export for object input', () => {
+  assert.deepEqual(getLiteralInventory({ mode: 'success' }), { exports: [{ name: 'hello' }] });
 });
