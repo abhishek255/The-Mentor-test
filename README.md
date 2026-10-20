@@ -285,7 +285,7 @@ Be respectful and kind.
 - Check that the proposed checks passed before approving.
 - Let the owner merge; do not merge on their behalf.
 
-> Build verified on Oct 20.
+> Build verified on October 20, 2026.
 
 ## 🙋 Getting Help
 
