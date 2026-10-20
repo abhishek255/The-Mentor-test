@@ -285,6 +285,8 @@ Be respectful and kind.
 - Check that the proposed checks passed before approving.
 - Let the owner merge; do not merge on their behalf.
 
+> Build verified on Oct 20.
+
 ## 🙋 Getting Help
 
 If you have a question, open a [GitHub Discussions](https://github.com/ps06756/The-Mentor/discussions) thread and we'll be happy to help.
