@@ -1,5 +1,7 @@
 # 🎓 The Mentor
 
+<!-- hi -->
+
 > **100+ AI Interview Agents for Claude Code**
 
 Stop practicing alone. Get realistic, adaptive mock interviews with expert AI agents that interview like engineers from Google, Meta, Amazon, and other top tech companies.
