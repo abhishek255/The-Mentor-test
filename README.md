@@ -164,6 +164,7 @@ Build a strong foundation for entry-level interviews.
 | Agent | Focus Area | Difficulty |
 |-------|-----------|------------|
 | [Arrays & HashMaps](./agents/swe-i/arrays-hashmaps-interviewer.md) | Two pointers, sliding window, frequency counting | Easy-Medium |
+| [Recursion](./agents/swe-i/recursion-interviewer.md) | Call stack, base cases, factorial, tree traversal | Easy-Medium |
 
 **What you'll master:** Pattern recognition, time/space complexity analysis, and translating ideas to clean code.
 
